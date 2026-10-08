@@ -97,7 +97,7 @@ const africanCountries = [
   { code: "+269", country: "Comores" },
 ].sort((a, b) => a.country.localeCompare(b.country));
 
-const formatPhone = (value) => {
+const formatPhone = (value: string) => {
   let val = value.replace(/[^\d+]/g, '');
   if (val.indexOf('+') > 0) {
     val = '+' + val.replace(/\+/g, '');
