@@ -375,7 +375,7 @@ export default function NewInvoicePage() {
                     </div>
                     <div className="flex flex-col gap-2.5">
                       <label className="text-[13px] font-bold text-slate-700">Statut de la facture</label>
-                      <Select value={status} onValueChange={setStatus}>
+                      <Select value={status} onValueChange={(val) => setStatus(val || 'brouillon')}>
                         <SelectTrigger className="h-11 rounded-2xl border-gray-200 text-sm font-medium shadow-sm w-full">
                           <SelectValue placeholder="Sélectionner un statut" />
                         </SelectTrigger>
@@ -436,9 +436,10 @@ export default function NewInvoicePage() {
                       <label className="text-[13px] font-bold text-slate-700">Téléphone</label>
                       <div className="flex">
                         <Select value={countryCode} onValueChange={(val) => {
-                          setCountryCode(val);
+                          const newCode = val || '';
+                          setCountryCode(newCode);
                           const stripped = clientPhone.replace(/^\+\d+\s*/, '');
-                          setClientPhone(formatPhone(val + stripped));
+                          setClientPhone(formatPhone(newCode + stripped));
                         }}>
                           <SelectTrigger className="w-[110px] h-11 rounded-l-xl rounded-r-none border-r-0 focus:ring-0 shadow-sm bg-gray-50 border-gray-200 truncate pr-2">
                             <SelectValue />
@@ -638,8 +639,8 @@ export default function NewInvoicePage() {
                         <tr key={i} className="border-b border-slate-50">
                           <td className="py-5 text-[14px] font-bold text-slate-900">{line.description || "—"}</td>
                           <td className="py-5 text-[14px] font-medium text-slate-500 text-center">{line.quantity}</td>
-                          <td className="py-5 text-[14px] font-medium text-slate-500 text-right">{formatFCFA(line.unitPrice)}</td>
-                          <td className="py-5 text-[14px] font-bold text-slate-900 text-right">{formatFCFA(line.quantity * line.unitPrice)}</td>
+                          <td className="py-5 text-[14px] font-medium text-slate-500 text-right">{formatFCFA(Number(line.unitPrice))}</td>
+                          <td className="py-5 text-[14px] font-bold text-slate-900 text-right">{formatFCFA(Number(line.quantity) * Number(line.unitPrice))}</td>
                         </tr>
                       ))}
                     </tbody>
