@@ -6,6 +6,9 @@ import { supabase } from "@/lib/supabase";
 import { Sidebar } from "./Sidebar";
 import { Header } from "./Header";
 
+// Pages accessible without being logged in
+const PUBLIC_PATHS = ["/", "/login"];
+
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
@@ -16,7 +19,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
       setLoading(false);
-      if (!session && pathname !== "/login") {
+      if (!session && !PUBLIC_PATHS.includes(pathname)) {
         router.push("/login");
       }
     });
@@ -25,13 +28,18 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session);
-      if (!session && pathname !== "/login") {
+      if (!session && !PUBLIC_PATHS.includes(pathname)) {
         router.push("/login");
       }
     });
 
     return () => subscription.unsubscribe();
   }, [pathname, router]);
+
+  // The landing page renders immediately, without spinner or app layout
+  if (pathname === "/") {
+    return <>{children}</>;
+  }
 
   if (loading) {
     return (

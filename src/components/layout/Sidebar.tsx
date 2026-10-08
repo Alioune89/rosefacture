@@ -22,7 +22,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const navigation = [
-  { name: "Tableau de bord", href: "/", icon: LayoutDashboard },
+  { name: "Tableau de bord", href: "/dashboard", icon: LayoutDashboard },
   { name: "Factures", href: "/factures", icon: FileText },
   { name: "Clients", href: "/clients", icon: Users },
   { name: "Produits", href: "/produits", icon: Package },
