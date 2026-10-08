@@ -66,7 +66,7 @@ export function Sidebar({ isMobile = false }: { isMobile?: boolean }) {
       <div className="flex h-16 shrink-0 items-center justify-between px-4 border-b border-white/10">
         {!isCollapsed && (
           <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-            FacturaApp
+            RoseFacture
           </span>
         )}
         <button
