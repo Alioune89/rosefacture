@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function App() {
   return (
@@ -18,12 +19,12 @@ export default function App() {
             <a href="#pricing" className="hover:text-white transition-colors">Tarifs</a>
           </div>
           <div className="flex items-center gap-4">
-            <button className="hidden md:block text-sm font-medium hover:text-white transition-colors">
+            <Link href="/login" className="hidden md:block text-sm font-medium hover:text-white transition-colors">
               Se connecter
-            </button>
-            <button className="px-5 py-2.5 rounded-full bg-white text-slate-950 text-sm font-semibold hover:bg-slate-200 transition-colors">
+            </Link>
+            <Link href="/login?mode=signup" className="px-5 py-2.5 rounded-full bg-white text-slate-950 text-sm font-semibold hover:bg-slate-200 transition-colors">
               Commencer
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -52,12 +53,12 @@ export default function App() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="px-8 py-4 rounded-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold transition-all shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 w-full sm:w-auto">
+            <Link href="/login?mode=signup" className="px-8 py-4 rounded-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold transition-all shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 w-full sm:w-auto text-center">
               Démarrer gratuitement
-            </button>
-            <button className="px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 font-semibold transition-all w-full sm:w-auto">
+            </Link>
+            <Link href="/login" className="px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 font-semibold transition-all w-full sm:w-auto text-center">
               Voir la démo
-            </button>
+            </Link>
           </div>
 
           {/* Dashboard Preview mockup */}
