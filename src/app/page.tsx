@@ -71,30 +71,31 @@ export default function LandingPage() {
           </div>
 
           {/* Floating UI Elements / Dashboard Mockup */}
-          <div className="mt-20 max-w-[1020px] mx-auto relative perspective-[1400px]">
-             {/* Floating cards */}
-             <div className="absolute -left-16 top-28 bg-white/95 backdrop-blur rounded-[14px] p-3.5 shadow-[0_18px_45px_rgba(30,25,88,0.14)] border border-[#e2e0ef]/80 z-20 flex gap-3 items-center animate-[float_5s_ease-in-out_infinite]">
-                <div className="w-9 h-9 rounded-lg bg-[#e5f8ef] text-[#1e9e6a] flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-[9px] text-[#666a82]">Paiement reçu</div>
-                  <div className="font-mono font-bold text-xs text-[#15162b]">350 000 FCFA</div>
-                </div>
-             </div>
-             
-             <div className="absolute -right-16 top-14 bg-white/95 backdrop-blur rounded-[14px] p-3.5 shadow-[0_18px_45px_rgba(30,25,88,0.14)] border border-[#e2e0ef]/80 z-20 flex gap-3 items-center animate-[float_5s_ease-in-out_infinite] [animation-delay:-2s]">
-                <div className="w-9 h-9 rounded-lg bg-[#fff0e8] text-[#f47b45] flex items-center justify-center">
-                  <PieChart className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-[9px] text-[#666a82]">TVA calculée</div>
-                  <div className="font-mono font-bold text-xs text-[#15162b]">18% automatique</div>
-                </div>
-             </div>
+          <div className="mt-20 max-w-[1020px] mx-auto relative [perspective:1400px] w-full overflow-hidden md:overflow-visible px-4 md:px-0">
+             <div className="relative w-[800px] md:w-full max-w-full mx-auto left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0">
+               {/* Floating cards */}
+               <div className="absolute -left-4 md:-left-16 top-28 bg-white/95 backdrop-blur rounded-[14px] p-3.5 shadow-[0_18px_45px_rgba(30,25,88,0.14)] border border-[#e2e0ef]/80 z-20 flex gap-3 items-center animate-[float_5s_ease-in-out_infinite]">
+                  <div className="w-9 h-9 rounded-lg bg-[#e5f8ef] text-[#1e9e6a] flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-[9px] text-[#666a82]">Paiement reçu</div>
+                    <div className="font-mono font-bold text-xs text-[#15162b]">350 000 FCFA</div>
+                  </div>
+               </div>
+               
+               <div className="absolute -right-4 md:-right-16 top-14 bg-white/95 backdrop-blur rounded-[14px] p-3.5 shadow-[0_18px_45px_rgba(30,25,88,0.14)] border border-[#e2e0ef]/80 z-20 flex gap-3 items-center animate-[float_5s_ease-in-out_infinite] [animation-delay:-2s]">
+                  <div className="w-9 h-9 rounded-lg bg-[#fff0e8] text-[#f47b45] flex items-center justify-center">
+                    <PieChart className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-[9px] text-[#666a82]">TVA calculée</div>
+                    <div className="font-mono font-bold text-xs text-[#15162b]">18% automatique</div>
+                  </div>
+               </div>
 
-             {/* Main Dashboard Mockup */}
-             <div className="rounded-[24px] border border-[#e2e0ef]/80 bg-white shadow-[0_45px_90px_rgba(29,24,87,0.15)] overflow-hidden relative z-10 rotate-x-3 transform-gpu grid grid-cols-[190px_1fr] min-h-[440px]">
+               {/* Main Dashboard Mockup */}
+               <div className="rounded-[24px] border border-[#e2e0ef]/80 bg-white shadow-[0_45px_90px_rgba(29,24,87,0.15)] overflow-hidden relative z-10 grid grid-cols-[190px_1fr] min-h-[440px] [transform:rotateX(3deg)]">
                   {/* Sidebar */}
                   <div className="bg-[#17172d] text-white p-6 pb-8">
                     <div className="font-extrabold flex items-center gap-2 mb-10 text-sm tracking-tight">
@@ -171,6 +172,7 @@ export default function LandingPage() {
                         </div>
                      </div>
                   </div>
+             </div>
              </div>
           </div>
         </section>
