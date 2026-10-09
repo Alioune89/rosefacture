@@ -71,101 +71,101 @@ export default function LandingPage() {
           </div>
 
           {/* Floating UI Elements / Dashboard Mockup */}
-          <div className="mt-20 max-w-[1020px] mx-auto relative [perspective:1400px] w-full overflow-hidden md:overflow-visible px-4 md:px-0">
-             <div className="relative w-[800px] md:w-full max-w-full mx-auto left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0">
+          <div className="mt-20 max-w-[1020px] mx-auto relative [perspective:1400px] w-full overflow-x-auto md:overflow-visible h-[530px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+             <div className="relative w-[800px] md:w-[900px] md:mx-auto ml-4 sm:ml-auto md:origin-top">
                {/* Floating cards */}
-               <div className="absolute -left-4 md:-left-16 top-28 bg-white/95 backdrop-blur rounded-[14px] p-3.5 shadow-[0_18px_45px_rgba(30,25,88,0.14)] border border-[#e2e0ef]/80 z-20 flex gap-3 items-center animate-[float_5s_ease-in-out_infinite]">
-                  <div className="w-9 h-9 rounded-lg bg-[#e5f8ef] text-[#1e9e6a] flex items-center justify-center">
+               <div className="absolute left-[-10px] md:-left-12 top-28 bg-white/95 backdrop-blur rounded-[16px] p-4 shadow-[0_24px_50px_rgba(30,25,88,0.12)] border border-[#e2e0ef]/80 z-20 flex gap-4 items-center animate-[float_5s_ease-in-out_infinite]">
+                  <div className="w-10 h-10 rounded-[10px] bg-[#e5f8ef] text-[#1e9e6a] flex items-center justify-center">
                     <TrendingUp className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[9px] text-[#666a82]">Paiement reçu</div>
-                    <div className="font-mono font-bold text-xs text-[#15162b]">350 000 FCFA</div>
+                    <div className="text-[10px] text-[#666a82] mb-0.5">Paiement reçu</div>
+                    <div className="font-mono font-bold text-sm text-[#15162b]">350 000 FCFA</div>
                   </div>
                </div>
                
-               <div className="absolute -right-4 md:-right-16 top-14 bg-white/95 backdrop-blur rounded-[14px] p-3.5 shadow-[0_18px_45px_rgba(30,25,88,0.14)] border border-[#e2e0ef]/80 z-20 flex gap-3 items-center animate-[float_5s_ease-in-out_infinite] [animation-delay:-2s]">
-                  <div className="w-9 h-9 rounded-lg bg-[#fff0e8] text-[#f47b45] flex items-center justify-center">
+               <div className="absolute right-0 md:-right-12 top-14 bg-white/95 backdrop-blur rounded-[16px] p-4 shadow-[0_24px_50px_rgba(30,25,88,0.12)] border border-[#e2e0ef]/80 z-20 flex gap-4 items-center animate-[float_5s_ease-in-out_infinite] [animation-delay:-2s]">
+                  <div className="w-10 h-10 rounded-[10px] bg-[#fff0e8] text-[#f47b45] flex items-center justify-center">
                     <PieChart className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[9px] text-[#666a82]">TVA calculée</div>
-                    <div className="font-mono font-bold text-xs text-[#15162b]">18% automatique</div>
+                    <div className="text-[10px] text-[#666a82] mb-0.5">TVA calculée</div>
+                    <div className="font-mono font-bold text-sm text-[#15162b]">18% automatique</div>
                   </div>
                </div>
 
                {/* Main Dashboard Mockup */}
-               <div className="rounded-[24px] border border-[#e2e0ef]/80 bg-white shadow-[0_45px_90px_rgba(29,24,87,0.15)] overflow-hidden relative z-10 grid grid-cols-[190px_1fr] min-h-[440px] [transform:rotateX(3deg)]">
+               <div className="rounded-[28px] border border-[#e2e0ef]/80 bg-white shadow-[0_45px_100px_rgba(29,24,87,0.15)] overflow-hidden relative z-10 flex min-h-[460px] [transform:rotateX(2deg)]">
                   {/* Sidebar */}
-                  <div className="bg-[#17172d] text-white p-6 pb-8">
-                    <div className="font-extrabold flex items-center gap-2 mb-10 text-sm tracking-tight">
-                      <div className="w-6 h-6 rounded-lg rounded-br-sm bg-[#4F46E5] -rotate-6" />
+                  <div className="w-[210px] bg-[#17172d] text-white p-7 flex-shrink-0">
+                    <div className="font-extrabold flex items-center gap-2.5 mb-12 text-sm tracking-tight">
+                      <div className="w-7 h-7 rounded-lg rounded-br-sm bg-[#4F46E5] -rotate-6" />
                       RoseFacture
                     </div>
-                    <div className="space-y-2.5 flex-1">
-                      <div className="px-2.5 py-2.5 rounded-lg bg-white/10 text-white text-[10px] flex items-center gap-2.5">
-                         <div className="w-3.5 h-3.5 rounded bg-white/20" /> Tableau de bord
+                    <div className="space-y-3">
+                      <div className="px-3 py-2.5 rounded-xl bg-white/10 text-white text-[11px] font-medium flex items-center gap-3">
+                         <div className="w-4 h-4 rounded-[4px] bg-white/20" /> Tableau de bord
                       </div>
-                      <div className="px-2.5 py-2.5 rounded-lg text-[#9999ad] text-[10px] flex items-center gap-2.5">
-                         <div className="w-3.5 h-3.5 rounded border border-slate-500" /> Factures
+                      <div className="px-3 py-2.5 rounded-xl text-[#9999ad] text-[11px] font-medium flex items-center gap-3">
+                         <div className="w-4 h-4 rounded-[4px] border-2 border-slate-600/50" /> Factures
                       </div>
-                      <div className="px-2.5 py-2.5 rounded-lg text-[#9999ad] text-[10px] flex items-center gap-2.5">
-                         <div className="w-3.5 h-3.5 rounded border border-slate-500" /> Clients
+                      <div className="px-3 py-2.5 rounded-xl text-[#9999ad] text-[11px] font-medium flex items-center gap-3">
+                         <div className="w-4 h-4 rounded-[4px] border-2 border-slate-600/50" /> Clients
                       </div>
                     </div>
                   </div>
                   {/* Main content area */}
-                  <div className="bg-[#fafafe] p-8">
-                     <div className="flex justify-between items-center mb-6">
+                  <div className="flex-1 bg-[#fbfbfe] p-9">
+                     <div className="flex justify-between items-start mb-8">
                        <div>
-                         <h3 className="text-lg font-bold text-slate-900">Bonjour, Awa</h3>
-                         <p className="text-[9px] text-[#8b8c9d] mt-1">Voici la santé de ton activité aujourd'hui.</p>
+                         <h3 className="text-[22px] font-extrabold text-slate-900 tracking-tight">Bonjour, Rose</h3>
+                         <p className="text-[10px] text-[#8b8c9d] mt-1.5">Voici la santé de ton activité aujourd'hui.</p>
                        </div>
-                       <div className="w-8 h-8 rounded-full bg-[#fff0e8] text-[#f47b45] font-extrabold flex items-center justify-center text-[9px]">AN</div>
+                       <div className="w-9 h-9 rounded-full bg-[#fff0e8] text-[#f47b45] font-extrabold flex items-center justify-center text-[10px]">AN</div>
                      </div>
-                     <div className="grid grid-cols-3 gap-3.5 mb-3.5">
-                        <div className="bg-white p-4 rounded-[14px] border border-[#efedf5]">
-                          <div className="text-[9px] text-[#8b8c9d] mb-1">Chiffre d'affaires</div>
-                          <div className="font-mono text-base font-bold text-slate-900">2,45M</div>
-                          <div className="text-[8px] text-[#1e9e6a] mt-1">+12,4% ce mois</div>
+                     <div className="grid grid-cols-3 gap-4 mb-4">
+                        <div className="bg-white p-5 rounded-[16px] border border-[#efedf5] shadow-sm">
+                          <div className="text-[10px] text-[#8b8c9d] mb-2">Chiffre d'affaires</div>
+                          <div className="font-mono text-[22px] font-extrabold text-slate-900 tracking-tight">2,45M</div>
+                          <div className="text-[9px] text-[#1e9e6a] font-medium mt-1.5">+12,4% ce mois</div>
                         </div>
-                        <div className="bg-white p-4 rounded-[14px] border border-[#efedf5]">
-                          <div className="text-[9px] text-[#8b8c9d] mb-1">Factures payées</div>
-                          <div className="font-mono text-base font-bold text-slate-900">18</div>
-                          <div className="text-[8px] text-[#1e9e6a] mt-1">+3 cette semaine</div>
+                        <div className="bg-white p-5 rounded-[16px] border border-[#efedf5] shadow-sm">
+                          <div className="text-[10px] text-[#8b8c9d] mb-2">Factures payées</div>
+                          <div className="font-mono text-[22px] font-extrabold text-slate-900 tracking-tight">18</div>
+                          <div className="text-[9px] text-[#1e9e6a] font-medium mt-1.5">+3 cette semaine</div>
                         </div>
-                        <div className="bg-white p-4 rounded-[14px] border border-[#efedf5]">
-                          <div className="text-[9px] text-[#8b8c9d] mb-1">En attente</div>
-                          <div className="font-mono text-base font-bold text-slate-900">475K</div>
-                          <div className="text-[8px] text-[#f47b45] mt-1">3 à relancer</div>
+                        <div className="bg-white p-5 rounded-[16px] border border-[#efedf5] shadow-sm">
+                          <div className="text-[10px] text-[#8b8c9d] mb-2">En attente</div>
+                          <div className="font-mono text-[22px] font-extrabold text-slate-900 tracking-tight">475K</div>
+                          <div className="text-[9px] text-[#f47b45] font-medium mt-1.5">3 à relancer</div>
                         </div>
                      </div>
-                     <div className="grid grid-cols-[1.4fr_1fr] gap-3.5 h-[185px]">
-                        <div className="bg-white p-4 rounded-[14px] border border-[#efedf5] flex flex-col">
-                           <div className="text-[11px] font-bold text-slate-900">Encaissements</div>
-                           <div className="flex-1 flex items-end gap-2 mt-5">
-                             {[38, 55, 43, 86, 67, 76].map((h, i) => (
-                               <div key={i} className="flex-1 rounded-t-sm" style={{ height: `${h}%`, backgroundColor: i === 3 ? '#4F46E5' : i === 1 || i === 4 ? '#c8c4ff' : '#eeedff' }} />
+                     <div className="grid grid-cols-[1.2fr_1fr] gap-4 h-[200px]">
+                        <div className="bg-white p-5 rounded-[16px] border border-[#efedf5] shadow-sm flex flex-col">
+                           <div className="text-[12px] font-bold text-slate-900">Encaissements</div>
+                           <div className="flex-1 flex items-end gap-[6px] mt-6">
+                             {[30, 50, 35, 95, 60, 85].map((h, i) => (
+                               <div key={i} className="flex-1 rounded-t-[3px]" style={{ height: `${h}%`, backgroundColor: i === 3 ? '#4F46E5' : i === 1 || i === 4 ? '#c8c4ff' : '#eeedff' }} />
                              ))}
                            </div>
                         </div>
-                        <div className="bg-white p-4 rounded-[14px] border border-[#efedf5] flex flex-col">
-                           <div className="text-[11px] font-bold text-slate-900">Dernières factures</div>
-                           <div className="space-y-3 flex-1 mt-5">
+                        <div className="bg-white p-5 rounded-[16px] border border-[#efedf5] shadow-sm flex flex-col">
+                           <div className="text-[12px] font-bold text-slate-900">Dernières factures</div>
+                           <div className="space-y-3.5 flex-1 mt-6">
                              {[
                                { n: 'Baobab Studio', id: '#FAC-024' },
                                { n: 'Teranga Shop', id: '#FAC-023' },
                                { n: 'Naya Conseil', id: '#FAC-022' },
                              ].map((f, i) => (
-                               <div key={i} className="flex items-center justify-between text-[8px]">
-                                  <div className="flex items-center gap-2">
-                                    <div className="w-5 h-5 rounded bg-[#eeedff] text-[#4F46E5] font-bold flex items-center justify-center">F</div>
+                               <div key={i} className="flex items-center justify-between text-[9px]">
+                                  <div className="flex items-center gap-3">
+                                    <div className="w-[22px] h-[22px] rounded-md bg-[#eeedff] text-[#4F46E5] font-bold flex items-center justify-center">F</div>
                                     <div className="leading-tight">
-                                      <div className="font-bold text-slate-900">{f.n}</div>
-                                      <div className="text-[#9b9cab] text-[7px]">{f.id}</div>
+                                      <div className="font-extrabold text-slate-900 text-[10px]">{f.n}</div>
+                                      <div className="text-[#9b9cab] text-[8px] mt-0.5">{f.id}</div>
                                     </div>
                                   </div>
-                                  <div className="px-1.5 py-0.5 bg-[#e4f7ed] text-[#1e9e6a] rounded-full text-[7px]">Payée</div>
+                                  <div className="px-2 py-1 bg-[#e4f7ed] text-[#1e9e6a] font-semibold rounded-full text-[8px]">Payée</div>
                                </div>
                              ))}
                            </div>

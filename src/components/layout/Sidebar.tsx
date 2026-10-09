@@ -11,7 +11,8 @@ import {
   LogOut,
   Shield,
   Plus,
-  HelpCircle
+  HelpCircle,
+  Globe
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { clsx, type ClassValue } from "clsx";
@@ -64,10 +65,17 @@ export function Sidebar({ isMobile = false }: { isMobile?: boolean }) {
       )}
     >
       <div className="flex h-16 shrink-0 items-center justify-between px-4 border-b border-white/10">
-        {!isCollapsed && (
-          <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-            RoseFacture
-          </span>
+        {!isCollapsed ? (
+          <Link href="/dashboard" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <div className="w-7 h-7 rounded-[8px] bg-[#4F46E5] flex-shrink-0" />
+            <span className="text-lg font-bold text-white">
+              RoseFacture
+            </span>
+          </Link>
+        ) : (
+          <Link href="/dashboard" className="mx-auto hover:opacity-80 transition-opacity">
+            <div className="w-7 h-7 rounded-[8px] bg-[#4F46E5]" />
+          </Link>
         )}
         <button
           onClick={() => setCollapsed(!collapsed)}
@@ -105,7 +113,16 @@ export function Sidebar({ isMobile = false }: { isMobile?: boolean }) {
       </div>
       
       {!isCollapsed && (
-        <div className="p-4 mt-auto border-t border-white/10">
+        <div className="p-4 mt-auto border-t border-white/10 flex flex-col gap-2">
+          <Link 
+            href="/"
+            className="w-full flex items-center gap-3 px-3 py-2 text-sm text-[#99A0AC] hover:text-white hover:bg-[#252D3A] rounded-xl transition-all"
+          >
+            <div className="w-8 h-8 rounded-full bg-[#252D3A] flex items-center justify-center shrink-0">
+               <Globe size={16} />
+            </div>
+            <span className="font-medium">Retour au site</span>
+          </Link>
           <button 
             onClick={async () => {
               const { supabase } = await import('@/lib/supabase');
